@@ -14,8 +14,8 @@ async function checkweather(city){
     console.log(data) ;
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp ) + "°C";
-    document.querySelector(".wind").innerHTML = data.wind.speed;
-    document.querySelector(".Humid").innerHTML = data.main.humidity;
+    document.querySelector(".wind").innerHTML = data.wind.speed + "Km/H";
+    document.querySelector(".Humid").innerHTML = data.main.humidity + "%";
 
     if(data.weather[0].main=="Haze"){
         weather_icon.src="assets/mist.png"
